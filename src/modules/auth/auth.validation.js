@@ -8,7 +8,7 @@ export const signupSchema = joi
     password: joi.string().required(),
     confirmPassword: joi.string().valid(joi.ref("password")).required(),
     mobileNumber: joi.string().required(),
-    DOB: joi.date().required(),
+    DOB: joi.date(),
     role: joi
       .string()
       .valid("admin", "user", "companyHR", "companyOwner")
